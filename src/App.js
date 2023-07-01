@@ -16,7 +16,7 @@ function App() {
   const fetchURL = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/users/dashboard?page=${page}`,
+        `https://employee-table.onrender.com/api/users/dashboard?page=${page}`,
         {
           headers: {
             Authorization: `Bearer ${Token}`,
@@ -52,7 +52,7 @@ function App() {
     try {
       const { id, name, email, gender } = editUser;
       const response = await axios.patch(
-        `http://localhost:5000/api/users/edit/${id}`,
+        `https://employee-table.onrender.com/api/users/edit/${id}`,
         { name, email, gender },
         {
           headers: {
